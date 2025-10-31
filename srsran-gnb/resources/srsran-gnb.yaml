@@ -17,7 +17,7 @@ cu_cp:
             tai_slice_support_list:
               - sst: 1
                 sd: 000001
-              - sst: 2
+              - sst: 1
                 sd: 000002
 
 ru_sdr:
@@ -52,8 +52,8 @@ cell_cfg:
       sst: 1
       sd: 000001
     -
-      sst: 2
-      sd: 000002         
+      sst: 1
+      sd: 000002
 
 log:
   filename: /tmp/gnb.log
