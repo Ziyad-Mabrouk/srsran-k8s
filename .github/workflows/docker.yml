@@ -21,16 +21,16 @@ jobs:
       matrix:
         include:
           - NAME: srsran-gnb-zmq
-            DOCKERFILE: ./srsran-gnb/Dockerfile.zmq
-            CONTEXT: ./srsran-gnb
+            DOCKERFILE: ./srsran-gnb/zmq/Dockerfile.zmq
+            CONTEXT: ./srsran-gnb/zmq
             KEY: zmq
           - NAME: srsran-gnb-dpdk
-            DOCKERFILE: ./srsran-gnb/Dockerfile.dpdk
-            CONTEXT: ./srsran-gnb
+            DOCKERFILE: ./srsran-gnb/dpdk/Dockerfile.dpdk
+            CONTEXT: ./srsran-gnb/dpdk
             KEY: dpdk
           - NAME: srsran-gnb-uhd
-            DOCKERFILE: ./srsran-gnb/Dockerfile.uhd
-            CONTEXT: ./srsran-gnb
+            DOCKERFILE: ./srsran-gnb/uhd/Dockerfile.uhd
+            CONTEXT: ./srsran-gnb/uhd
             KEY: uhd
           - NAME: srsue
             DOCKERFILE: ./srsue/Dockerfile

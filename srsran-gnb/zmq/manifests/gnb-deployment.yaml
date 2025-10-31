@@ -27,7 +27,7 @@ spec:
           imagePullPolicy: IfNotPresent
           name: gnb
           command: ["/bin/bash", "-c"]
-          args: ["/srsran/config/start_gnb.sh"]
+          args: ["/usr/local/bin/gnb -c /srsran/config/srsran-gnb_zmq.yaml"]
           # resizePolicy:
           # - resourceName: cpu
           #   restartPolicy: NotRequired
@@ -70,11 +70,8 @@ spec:
           configMap:
             name: gnb-configmap
             items:
-              - key: srsran-gnb.yaml
-                path: srsran-gnb.yaml
-              - key: start_gnb.sh
-                path: start_gnb.sh
-                mode: 0777
+              - key: srsran-gnb_zmq.yaml
+                path: srsran-gnb_zmq.yaml
         - name: varlog
           emptyDir: {}
         - name: host-mount
